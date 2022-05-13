@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    display: flex;
+    position: fixed;
+    opacity: 80%;
+    top: 0px;
+    width: 100%;
+    height: 150px;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.menu nav{
+    color: white;
+}
+.menu ul{
+    display: flex;
+}
+.menu li{
+    margin-right: 1.5rem;
+}
+a{
+    color: white;
+}
+.containerHome{
+    display: grid;
+    margin: 150px auto 0px;
+    min-height: 100vh;
+    grid-row-gap: 10px;
+    grid-template:
+    "carrusel" 400px 
+    "mainHome" auto
+    "footer" 300px
+    ;
+}
+.carrusel{
+    grid-area: carrusel;
+    background-color: lightblue;
+    text-align: center;
+    margin: 10px 60px 0px 60px;
+}
+.mainHome{
+    grid-area: mainHome;
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+}
+.destinosHome{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.destinosHome .destinoHomeBox{
+    background: rgb(243, 235, 232);
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+}
+.header, .footer{
+    background-color: black;
+    color: white;
+}
+
+/*HOME RESPONSIVE*/
+
+@media all and (max-width: 768px){
+    .containerHome{
+        display: grid;
+        min-height: 100vh;
+        grid-row-gap: 10px;
+        grid-template:
+        "carrusel" 500px 
+        "mainHome" auto
+        "footer" 190px
+    ;
+}
+.carrusel{
+    margin: 10px 0px 0px 0px;
+}
+}
+@media all and (max-width: 1024px){
+    .header{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+}
+    .containerHome{
+        display: grid;
+        min-height: 100vh;
+        grid-row-gap: 10px;
+        grid-template:
+        "carrusel" 400px 
+        "mainHome" auto
+        "footer" 190px
+        ;
+}
+    .carrusel{
+        margin: 10px 0px 0px 0px;
+}
+}
+
+/*PAGINA DE DESTINOS*/
+
+.containerDestinos{
+    margin: 160px auto 0px;
+    display: grid;
+    min-height: 100vh;
+    grid-row-gap: 20px;
+    grid-template:
+    "carrusel2" 800px
+    "tituloDestino" 70px
+    "mainDestinos"auto
+    "mainDestinos2" auto
+    "footer" 300px
+    ;
+}
+.carrusel2{
+    grid-area: carrusel2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(105, 236, 219);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.tituloDestino{
+    grid-area: tituloDestino;
+    background-color: white;
+    color: pink;
+    text-align: center;
+}
+.mainDestinos{
+    grid-area: mainDestinos;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(207, 211, 224);
+}
+.cajaDestinosSur{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cajaDestinosSur .destino{
+    background: lightblue;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+.mainDestinos2{
+    grid-area: mainDestinos2;
+    width: 100%;
+    height: 100%;
+    background-color: cornsilk;
+}
+.cajaDestinosNorte{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cajaDestinosNorte .destino{
+    background: sandybrown;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+
+@media all and (max-width: 768px){
+    .carrusel2{
+        font-size: 20px;
+    }
+}
+/*PAGINA DE EXCURSIONES*/
+
+.containerExcursiones{
+    margin: 150px auto 0px;
+    display: grid;
+    min-height: 100vh;
+    grid-row-gap: 10px;
+    grid-template:
+    "videoExcursion" 600px
+    "tituloExcursion" 70px
+    "mainExcursiones"auto
+    "footer" 300px
+    ;
+}
+.videoExcursion{
+    grid-area: videoExcursion;
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.tituloExcursion{
+    grid-area: tituloExcursion;
+    background-color: floralwhite;
+    text-align: center;
+    font-size: 40px;
+}
+.mainExcursiones{
+    grid-area: mainExcursiones;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(207, 211, 224);
+}
+.cajaExcursion{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cajaExcursion .excursionImg{
+    background-color: black;
+    color: white;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin: 3px;
+}
+.cajaExcursion .excursionDescripcion{
+    background: whitesmoke;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin: 3px;
+}
+.cajaExcursion2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cajaExcursion2 .excursionDescripcion{
+    background: whitesmoke;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin: 3px;
+}
+.cajaExcursion2 .excursionImg{
+    background: black;
+    color: white;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    margin: 3px;
+}
+@media all and (max-width: 768px){
+    .videoExcursion{
+        font-size: 20px;
+    }
+    .cajaExcursion{
+        font-size: 40px;
+    }
+    .cajaExcursion2{
+        font-size: 40px;
+    }
+}
+
+/*PAGINA DE PROMOCIONES*/
+
+.containerPromo{
+    display: grid;
+    margin: 150px auto 0px;
+    min-height: 100vh;
+    grid-row-gap: 20px;
+    grid-template:
+    "carrusel" 400px 
+    "tituloPromo" 150px
+    "mainPaquetes" auto
+    "footer" 300px
+    ;
+}
+.tituloPromo{
+    grid-area: tituloPromo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    font-size: 30px;
+}
+.h1MainPromos{
+    text-align: center;
+}
+.mainPaquetes{
+    grid-area: mainPaquetes;
+    width: 100%;
+    height: 100%;
+}
+.cajaPromo{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.cajaPromo .pack{
+    background: rgb(243, 235, 232);
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+.cajaPromo2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.cajaPromo2 .pack{
+    background-color: black;
+    color: white;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+
+/*PAGINA DE CONTACTO*/
+
+.containerContacto{
+    margin: 150px auto 0px;
+    display: grid;
+    min-height: 100vh;
+    grid-row-gap: 10px;
+    grid-template:
+    "contactanos" 130px
+    "cajaMain" auto
+    "footer" 300px
+    ;
+}
+.contacto{
+    grid-area: contactanos;
+    background-color: yellow;
+    text-align: center;
+    margin: 10px 80px 0px 80px;
+}
+.cajaMain{
+    width: 100%;
+    height: 100%;
+    grid-area: cajaMain;
+    background-color: rgb(207, 211, 224);
+}
+.cajaDatos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cajaDatos .datos1{
+    background: pink;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+.cajaDatos .datos2{
+    background: rgb(216, 53, 81);
+    width: 700px;
+    height: 800px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+
+/*CONTACTO RESPONSIVE*/
+
+@media all and (max-width: 768px){
+    .containerContacto{
+        display: grid;
+        min-height: 100vh;
+        grid-row-gap: 10px;
+        grid-template:
+        "contactanos" 200px
+        "cajaMain" auto
+        "footer" 300px
+        ;
+}
+    .contacto{
+        font-size: 30px;
+        margin: 0px;
+}
+}
+@media all and (max-width: 1024px){
+    .containerContacto{
+    display: grid;
+    min-height: 100vh;
+    grid-row-gap: 10px;
+    grid-template:
+    "contactanos" 300px
+    "cajaMain" auto
+    "footer" 300px
+    ;
+}
+    .contacto{
+        font-size: 30px;
+        margin: 10px 0px 0px 0px;
+}
+.cajaDatos .datos1{
+    font-size: 50px;
+    width: 600px;
+    height: 500px;
+}
+.cajaDatos .datos2{
+    font-size: 50px;
+}
+}
