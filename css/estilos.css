@@ -73,8 +73,11 @@ a:hover:after{
 }
 .carrusel{
     grid-area: carrusel;
-    background-color: lightblue;
+    background: rgb(177,174,238);
+    background: linear-gradient(90deg, rgba(177,174,238,0.9248074229691877) 45%, rgba(175,220,244,0.927608543417367) 88%);
     text-align: center;
+    border: solid 3px rgb(215, 208, 208);
+    border-radius: 25px;
     margin: 10px 60px 0px 60px;
 }
 .mainHome{
@@ -184,10 +187,13 @@ a:hover:after{
     grid-area: carrusel2;
     display: flex;
     flex-direction: column;
-    background-color: rgb(105, 236, 219);
+    background: rgb(2,0,36);
+    background: linear-gradient(225deg, rgba(2,0,36,1) 0%, rgba(32,210,188,0.6530987394957983) 54%, rgba(0,212,255,1) 100%);
     color: white;
     align-items: center;
     justify-content: center;
+    border: solid 3px rgb(215, 208, 208);
+    border-radius: 25px;
     font-size: 30px;
 }
 .tituloDestino{
@@ -278,10 +284,13 @@ a:hover:after{
     grid-area: videoExcursion;
     display: flex;
     flex-direction: column;
-    background-color: lightsteelblue;
+    background: rgb(223,174,238);
+    background: radial-gradient(circle, rgba(223,174,238,0.9248074229691877) 0%, rgba(148,233,206,1) 100%);
     color: white;
     align-items: center;
     justify-content: center;
+    border: solid 3px rgb(215, 208, 208);
+    border-radius: 25px;
     margin-top: 10px;
     font-size: 30px;
 }
@@ -450,7 +459,9 @@ a:hover:after{
 }
 .contacto{
     grid-area: contactanos;
-    background-color: yellow;
+    background-color: rgba(207, 211, 224, .5);
+    border: solid 3px rgb(223,174,238);
+    border-radius: 25px;
     text-align: center;
     margin: 10px 80px 0px 80px;
 }
@@ -477,7 +488,7 @@ a:hover:after{
     margin: 20px;
 }
 .cajaDatos .datos2{
-    background: rgb(216, 53, 81);
+    background: rgb(223,174,238);
     width: 700px;
     height: 800px;
     overflow: hidden;
